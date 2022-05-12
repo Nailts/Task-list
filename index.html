@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+	<title>Task list</title>
+    <style>
+        :root {
+            --black: #000000;  
+            --white: #FFFFFF;
+            --purple: #6224B0;
+            --borderblue:#0e0595;
+            --md: 16px;
+        }
+            * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+        body {
+            background: var(--white);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 16px;
+        }
+
+        .container {
+            margin: auto;
+            max-width: 800px;
+            width: 90%;
+        }
+
+        .principal {
+            margin:16px;
+            margin-bottom: 48px;
+            background: var(--purple);
+            border-radius: 36px;
+            border: 3px solid var(--borderblue);
+            color: var(--white);
+            padding: 50px 0;
+        }
+
+        .principal .formulario {
+            color: var(--black) ;
+            text-align: center;
+        }
+
+        .principal .formulario input[type=text] {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .principal .formulario input[type=text].error {
+            border: 5px solid var(--borderblue);
+            color: red;
+        }
+
+        .principal .formulario .boton {
+            background: none;
+            border: 1px solid var(--borderblue);
+            border-radius: 16px;
+            color: var(--white);
+            display: inline-block;
+            font-size: 16px;
+            padding: 15px;
+        }
+
+        .principal .formulario .boton:hover {
+            border: 1px solid var(--white);
+        }
+
+        /* - Tareas - */
+        .task .list {
+            list-style: none;
+        }
+
+        .task .list li {
+            padding: 8px;
+            margin-bottom: 8px;
+            border-radius: 16px;
+            border: 1px solid var(--borderblue);
+        }
+
+        .task .list li a {
+            color: var(--black);
+            display: block;
+            padding: 20px 0;
+            text-decoration: none;
+        }
+
+        .task .list li a:hover {
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+	<div class="principal">
+		<div class="container">
+			<form class="formulario" action="">
+				<input type="text" id="taskaInput" placeholder="Add Task">
+				<input type="button" class="boton" id="btn-add" value="Add Task">
+			</form>
+		</div>
+	</div>
+
+	<div class="task">
+		<div class="container">
+			<ul class="list" id="list">
+				<li><a href="#">1. </a></li>
+				<li><a href="#">2.</a></li>
+				<li><a href="#">3.</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
